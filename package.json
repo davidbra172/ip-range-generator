@@ -1,0 +1,23 @@
+{
+  "name": "ip-range-generator",
+  "version": "1.0.0",
+  "description": "Generate IPv4 in a given range",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezpaarse-project/ip-range-generator.git"
+  },
+  "keywords": [
+    "ipv4",
+    "range"
+  ],
+  "author": "Yannick Schurter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezpaarse-project/ip-range-generator/issues"
+  },
+  "homepage": "https://github.com/ezpaarse-project/ip-range-generator#readme"
+}
