@@ -1,7 +1,6 @@
 'use strict';
 
-const net    = require('net');
-const assert = require('assert');
+const ipv4 = /^(?:(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(?:\.(?!$)|$)){4}$/;
 
 /**
  * Convert an IPv4 to an hexadecimal representation
@@ -20,6 +19,10 @@ function ip2hex(ip) {
   return n;
 }
 
+function assertIpv4(str, msg) {
+  if (!ipv4.test(str)) { throw new Error(msg); }
+}
+
 /**
  * Generate all IPv4 that are included in the given range
  * @param {String} ip1   first IPv4 of the range
@@ -27,8 +30,8 @@ function ip2hex(ip) {
  * @yield {String} IPv4 included in the range
  */
 module.exports = function *range(ip1, ip2) {
-  assert(net.isIPv4(ip1), 'argument "ip1" must be a valid IPv4 address');
-  assert(net.isIPv4(ip2), 'argument "ip2" must be a valid IPv4 address');
+  assertIpv4(ip1, 'argument "ip1" must be a valid IPv4 address');
+  assertIpv4(ip2, 'argument "ip2" must be a valid IPv4 address');
 
   let hex  = ip2hex(ip1);
   let hex2 = ip2hex(ip2);
