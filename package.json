@@ -1,12 +1,12 @@
 {
   "name": "ip-range-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate IPv4 in a given range",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-   "engines": {
+  "engines": {
     "node": ">= 0.12.0",
     "iojs": ">= 1.0.0"
   },
